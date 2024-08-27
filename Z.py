@@ -173,17 +173,17 @@ json_data = {
             ],
         },
     },
-    'videoId': 'aGBPysEgDb0',
+    'videoId': 'CghwO9Qe4Yg',
     'playbackContext': {
         'contentPlaybackContext': {
-            'currentUrl': '/watch?v=aGBPysEgDb0',
+            'currentUrl': '/watch?v=CghwO9Qe4Yg',
             'vis': 0,
             'splay': False,
             'autoCaptionsDefaultOn': False,
             'autonavState': 'STATE_NONE',
             'html5Preference': 'HTML5_PREF_WANTS',
             'signatureTimestamp': 19949,
-            'referer': 'https://www.youtube.com/watch?v=aGBPysEgDb0',
+            'referer': 'https://www.youtube.com/watch?v=CghwO9Qe4Yg',
             'lactMilliseconds': '-1',
             'watchAmbientModeContext': {
                 'hasShownAmbientMode': True,
@@ -210,7 +210,7 @@ print(response.text)
 #os.system(f"ffmpeg -http_persistent 0 -re -i '{pr}' -threads 4 -vf \"format=yuv420p\" -c:v libx264 -g 48 -b:v 9000k -c:a copy -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/gkjq-gc2k-hbcc-3jwq-9pp6")
 
 
-os.system(f"ffmpeg -http_persistent 0 -ss 00:00:00 -re -i '{pr}' -c:v copy -c:a copy -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/43ys-88cy-7e3t-khew-3csa")
+os.system(f"ffmpeg -http_persistent 0 -re -i '{pr}' -vf format=yuv420p -c:v libx264 -c:a aac -g 48 -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/vt1b-fcp2-3u15-927x-9s3j")
 
 
 
