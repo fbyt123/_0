@@ -217,7 +217,7 @@ print(response.text)
 
 
 
-os.system(f"ffmpeg -http_persistent 0 -re -ss 08:05:00 -i '{pr}' -max_muxing_queue_size 9999 -threads 4 -vf \"format=yuv420p,drawtext=fontfile=_.ttf:text='F B':fontcolor=white:fontsize=130:line_spacing=32:bordercolor=black:borderw=10:box=0:boxcolor=black@0.1:boxborderw=80:x=w-tw-20:y=h-th-20\" -c:v libx264 -g 48 -b:v 9000k -c:a copy -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/vt1b-fcp2-3u15-927x-9s3j")
+os.system(f"ffmpeg -http_persistent 0 -re -ss 11:15:00 -i '{pr}' -max_muxing_queue_size 9999 -threads 4 -vf \"format=yuv420p,drawtext=fontfile=_.ttf:text='F B':fontcolor=white:fontsize=130:line_spacing=32:bordercolor=black:borderw=10:box=0:boxcolor=black@0.1:boxborderw=80:x=w-tw-20:y=h-th-20\" -c:v libx264 -g 48 -b:v 9000k -c:a copy -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/vt1b-fcp2-3u15-927x-9s3j")
 
 
 #os.system(f"ffmpeg -http_persistent 0 -ss 00:00:00 -re -i '{pr}' -threads 4 -vcodec copy -c:a copy -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/u151-yfj5-6g19-c006-a0js")
