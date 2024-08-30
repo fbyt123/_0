@@ -173,17 +173,17 @@ json_data = {
             ],
         },
     },
-    'videoId': 'Vn-VgqSTx_U',
+    'videoId': 'YNWHR6lMk1c',
     'playbackContext': {
         'contentPlaybackContext': {
-            'currentUrl': '/watch?v=Vn-VgqSTx_U',
+            'currentUrl': '/watch?v=YNWHR6lMk1c',
             'vis': 0,
             'splay': False,
             'autoCaptionsDefaultOn': False,
             'autonavState': 'STATE_NONE',
             'html5Preference': 'HTML5_PREF_WANTS',
             'signatureTimestamp': 19949,
-            'referer': 'https://www.youtube.com/watch?v=Vn-VgqSTx_U',
+            'referer': 'https://www.youtube.com/watch?v=YNWHR6lMk1c',
             'lactMilliseconds': '-1',
             'watchAmbientModeContext': {
                 'hasShownAmbientMode': True,
@@ -217,7 +217,14 @@ print(response.text)
 
 
 
-os.system(f"ffmpeg -http_persistent 0 -re -ss 11:15:00 -i '{pr}' -max_muxing_queue_size 9999 -threads 4 -vf \"format=yuv420p,drawtext=fontfile=_.ttf:text='F B':fontcolor=white:fontsize=130:line_spacing=32:bordercolor=black:borderw=10:box=0:boxcolor=black@0.1:boxborderw=80:x=w-tw-20:y=h-th-20\" -c:v libx264 -g 48 -b:v 9000k -c:a copy -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/vt1b-fcp2-3u15-927x-9s3j")
+#Previous
+
+#os.system(f"ffmpeg -http_persistent 0 -re -ss 11:15:00 -i '{pr}' -max_muxing_queue_size 9999 -threads 4 -vf \"format=yuv420p,drawtext=fontfile=_.ttf:text='F B':fontcolor=white:fontsize=130:line_spacing=32:bordercolor=black:borderw=10:box=0:boxcolor=black@0.1:boxborderw=80:x=w-tw-20:y=h-th-20\" -c:v libx264 -g 48 -b:v 9000k -c:a copy -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/vt1b-fcp2-3u15-927x-9s3j")
+
+
+
+
+os.system(f"ffmpeg -http_persistent 0 -re -ss 00:00:13 -i '{pr}' -max_muxing_queue_size 9999 -threads 4 -vf \"format=yuv420p,drawtext=fontfile=_.ttf:text='F B':fontcolor=white:fontsize=130:line_spacing=32:bordercolor=black:borderw=10:box=0:boxcolor=black@0.1:boxborderw=80:x=w-tw-20:y=h-th-20\" -c:v libx264 -g 48 -b:v 20M -c:a aac -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/43ys-88cy-7e3t-khew-3csa")
 
 
 #os.system(f"ffmpeg -http_persistent 0 -ss 00:00:00 -re -i '{pr}' -threads 4 -vcodec copy -c:a copy -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/u151-yfj5-6g19-c006-a0js")
